@@ -54,8 +54,8 @@ console.log(`https:api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long
 
         let heureActuelle = new Date().getHours();
 
-console.log(heure);
-console.log("len : "+heure.length);
+        console.log(heure);
+        console.log("len : "+heure.length);
 
         for(let i = 0; i < heure.length; i++){
 
@@ -70,23 +70,23 @@ console.log("len : "+heure.length);
             }
         }
 
-console.log(tempPourH);
-console.log("len : "+tempPourH.length);
+        console.log(tempPourH);
+        console.log("len : "+tempPourH.length);
         //temp pour 3h
         for(let j =0; j < tempPourH.length; j++){
             tempPourH[j].innerText = `${resultatsAPI.hourly[j * 3].temp}°`
         }
 
         //trois première lettre des jours 
-console.log(joursDiv);
-console.log("len : "+joursDiv.length);
+        console.log(joursDiv);
+        console.log("len : "+joursDiv.length);
         for(let k=0; k< tabJoursEnOrdre.length; k++) {
             joursDiv[k].innerText = tabJoursEnOrdre[k].slice(0,3);
         }
 
         // Température 
-console.log(tempJoursDiv);
-console.log("len : "+tempJoursDiv.length);
+        console.log(tempJoursDiv);
+        console.log("len : "+tempJoursDiv.length);
         for(let m= 0; m < 7; m++){
         tempJoursDiv[m].innerText = `${Math.trunc(resultatsAPI.daily[m + 1].temp.day)}°`
         }
