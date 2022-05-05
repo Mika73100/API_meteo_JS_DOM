@@ -15,7 +15,7 @@ const joursDiv = document.querySelectorAll('.jour-prevision-nom');
 const tempJoursDiv = document.querySelectorAll('.jour-prevision-temp');
 const imgIcone = document.querySelector('.logo-meteo');
 const chargementContainer = document.querySelector('.overlay-icone-chargement');
-const description = document.querySelectorAll('.description');
+
 
 
 if(navigator.geolocation){
@@ -33,7 +33,7 @@ if(navigator.geolocation){
 }
 
 function AppelAPI(long, lat) {
-    
+
 console.log(`https:api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=minutely&units=metric&lang=fr&appid=${CLEFAPI}`);
 
     fetch(`https:api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${long}&exclude=minutely&units=metric&lang=fr&appid=${CLEFAPI}`)
@@ -90,11 +90,6 @@ console.log("len : "+tempJoursDiv.length);
         for(let m= 0; m < 7; m++){
         tempJoursDiv[m].innerText = `${Math.trunc(resultatsAPI.daily[m + 1].temp.day)}°`
         }
-
-        //Description
-        for(let m= 0; m < 7; m++){
-            description[m].innerText = `${(resultatsAPI.current.weather[0].description)}`
-            }
 
         //logo dynamique
         if(heureActuelle >= 6 && heureActuelle < 21) {
