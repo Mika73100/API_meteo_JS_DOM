@@ -12,7 +12,7 @@ Une application web interactive permettant de **consulter la météo en temps r�
 Elle utilise une **API météo** pour afficher des informations comme la **température**, **l’humidité**, **la vitesse du vent** et plus encore !
 
 <br>
-<img src="assets/584shots_so.png" alt="aperçu de l'application météo" width="400"/>
+<img src="584shots_so.png" alt="aperçu de l'application météo" width="400"/>
 
 </div>
 
